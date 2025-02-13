@@ -7,3 +7,6 @@
 .env
 tmp
 .rillcloud
+.DS_Store
+*.db
+*.db.wal
