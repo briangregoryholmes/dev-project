@@ -1,0 +1,18 @@
+# Explore YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/explores
+
+type: explore
+
+title: "DuckDB Commits"
+metrics_view: duckdb_commits_metrics
+
+dimensions: "*"
+measures:
+  - sum_of_additions
+  - sum_of_deletions
+  - sum_of_changes
+  - percent_code_change
+  - count_files_touched_per_commit
+  - count_distinct_username
+defaults:
+  time_range: P12M

@@ -1,0 +1,52 @@
+# Explore YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/explores
+
+type: explore
+
+title: "Rill Commits"
+metrics_view: rill_commits_metrics
+
+dimensions:
+  - previous_file_path
+  - first_directory
+  - commit_hash
+  - commit_message
+  - username
+  - is_merge_commit
+  - second_directory
+measures:
+  - count_of_distinct_filename
+  - sum_of_deletions
+  - sum_of_changes
+  - sum_of_additions
+  - percent_code_change
+defaults:
+  time_range: PT24H
+time_ranges:
+  - 0D
+  - -7d
+  - -7d, now/d
+  - 0Y
+  - PT24H
+  - P7D
+  - rill-TD
+  - rill-WTD
+  - rill-MTD
+  - rill-QTD
+  - rill-YTD
+  - rill-PDC
+  - rill-PWC
+  - rill-PMC
+  - rill-PQC
+  - rill-PYC
+time_zones:
+  - America/Chicago
+  - America/New_York
+  - Europe/London
+  - Europe/Paris
+  - Asia/Jerusalem
+  - Europe/Moscow
+  - Asia/Kolkata
+  - Asia/Shanghai
+  - Asia/Tokyo
+  - Australia/Sydney
